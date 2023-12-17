@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .tags-container {
+            display: flex;
+            gap: 10px; /* Khoảng cách giữa các thẻ */
+        }
+
+        .tag {
+            padding: 5px 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none; /* Loại bỏ gạch chân mặc định của liên kết */
+        }
+
+        .tag.active {
+            text-decoration: underline; /* Gạch chân khi được nhấp */
+        }
+    </style>
+</head>
+<body>
+    <div class="tags-container">
+        <a href="" class="tag" onclick="setActiveTag('all.html')">All</a>
+        <a href="" class="tag" onclick="setActiveTag('2022.html')">2022</a>
+        <a href="" class="tag" onclick="setActiveTag('2023.html')">2023</a>
+    </div>
+
+    <script>
+        // Hàm để đặt trạng thái "active" và lưu vào localStorage
+        function setActiveTag(href) {
+            document.querySelectorAll('.tag').forEach(tag => tag.classList.remove('active'));
+            const clickedTag = document.querySelector(`.tag[href="${href}"]`);
+            clickedTag.classList.add('active');
+            
+            // Lưu trạng thái vào localStorage
+            localStorage.setItem('activeTag', href);
+        }
+
+        // Kiểm tra và tái tạo trạng thái "active" từ localStorage khi trang được tải
+        document.addEventListener('DOMContentLoaded', function () {
+            const activeTag = localStorage.getItem('activeTag');
+            if (activeTag) {
+                setActiveTag(activeTag);
+            }
+        });
+    </script>
+</body>
+</html>

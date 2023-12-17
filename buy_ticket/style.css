@@ -1,0 +1,307 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(63, 3, 3);
+}
+
+html{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    scroll-behavior: smooth;
+}
+/* header */
+#header{   
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #000;
+    padding: 16px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    height: 61px;
+
+}
+.header-logo img{
+    width: 54%;
+}
+/* nav */
+#nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#nav a{
+    position: relative;
+    font-size: 0.9em;
+    color: #FA92AC;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-left: 20px;
+}
+#nav .login-btn {
+    color: #fff;
+    margin-left: 30px;
+    font-size: 20px;
+}
+#nav a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 2px;
+    background: #FA92AC;
+    border-radius: 6px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+#nav a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+@media screen and (max-width: 768px) {
+    .girl-container {
+        gap: 10px;
+    }
+  }
+
+@media screen and (min-width: 769px) {
+     .girl-container {
+        gap: 40px;
+    }
+}
+
+
+.girl-container {
+    display: flex;
+    width: 100%; /* Chiều rộng của container */
+    margin: auto; /* Canh giữa container */
+    position: relative;
+    justify-content: center;
+    margin-top: 90px;
+}
+
+.girl-image {
+    width: 100%;
+    height: auto;
+    opacity: 1;
+    transition: transform 1s ease-in-out, opacity 0.5s ease-in-out;
+    max-width: 20%;
+    /* max-height: 20%; */
+    /* margin-right: 35px; */
+    box-shadow: 0px 0px 10px palevioletred;
+}
+
+
+@media screen and (max-width: 768px) {
+    .schedule h1{
+        font-size: 4rem;
+    
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .schedule h1{
+        font-size: 7rem;
+    
+    }
+}
+
+.schedule h1{
+    text-align: center;
+    color: palevioletred;
+    letter-spacing: 10px;
+    margin-top: 160px;
+    margin-bottom: 50px;
+    font-family: ans serif;
+    font-weight: bolder;
+
+}
+.time-selector {
+    display: flex;
+    justify-content: center;
+}
+.tag {
+    padding: 5px 10px;
+    color: palevioletred;
+    cursor: pointer;
+    font-size: 40px;
+    margin-bottom: 40px;
+    
+}
+.tag:hover, .tag.active {
+    border: 2px dashed palevioletred;
+}
+
+.schedule-container {
+    padding: 10px;
+}
+
+.box-wrapper {
+    display: flex;
+    justify-content: space-between; /* Các phần tử con sẽ được căn giữa theo chiều ngang */
+    align-items: center; /* Các phần tử con sẽ được căn giữa theo chiều dọc */
+    border: 1px solid #ccc; /* Để dễ nhìn thấy box */
+    padding: 70px; /* Để tăng độ rộng của box */
+    background-color: rgb(45, 44, 44);
+    margin-bottom: 60px;
+        
+}
+
+.box {
+    width: 100%;
+}
+.event{
+    color: #f0f0f0f0;
+    font-weight: bold;
+    font-size: 45px;
+    padding: 10px 0px;
+}
+
+.location{
+    color: #f0f0f0f0;
+    font-weight: bold;
+    font-size: 20px;
+}
+.comingsoon{
+    color: grey;
+    font-weight: bold;
+    font-size: 25px;
+}
+.time {
+    color: palevioletred;
+    font-weight: bold;
+    font-size: 25px;
+}
+.btn{
+    width: 150px;
+    /* height: 50px; */
+    border-radius: 5px;
+    background-color: grey;
+    border: none;
+    color: #ffffff;
+    padding: 18px;
+    font-size: 20px;
+}
+
+.btn-info-wrapper {
+    display: flex;
+}
+
+.btn-info{
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: grey;
+    border: solid white;
+    color: #f0f0f0f0;
+    font-size: 20px;
+    margin-right: 10px;
+    text-decoration: none;
+    
+}
+.btn-info a{
+    text-decoration: none;
+    color:white;
+}
+.btn-link a {
+    text-decoration: none;
+    color: #000;
+}
+.btn-link{
+    width: 100px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: lightpink;
+    border: none;
+    color: #000;
+    font-size: 20px;
+    text-decoration: none;
+}
+/* vị trí sân khấu*/
+.stage{
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin: auto; 
+    position: relative;
+    justify-content: center;
+}
+.stage img{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 80%;
+    margin-top: 60px;
+
+}
+.costticket{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.costticket ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 13px;
+}
+
+.costticket ul li{
+    color: azure;
+    font-weight: bold;
+    font-size: 25px;
+    display: flex;
+    justify-content: space-between;
+    gap: 22px;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .costticket ul li span{
+        font-size: 15px;
+    }
+    }
+
+@media screen and (min-width: 769px) {
+    .costticket ul li span{
+        font-size: 35px;
+    }
+}
+
+#footer{
+    padding: 40px 16px;
+    text-align: center;
+    background-color: #FA92AC;
+
+}
+.socials-icon{
+    font-size: 28px;
+    opacity: 1;
+    color: #000 ;
+    margin-bottom: 30px;
+}
+.socials-icon a{
+    text-decoration: none;
+    color: #000 ;
+}
+.copyright{
+    font-size: 16px;
+    opacity: 1;
+    color: #000 ;
+}
+.copyright a{
+    color: #000 ;
+}
+.socials-icon a:hover,
+.copyright a:hover{
+    opacity: 0.7;
+}
