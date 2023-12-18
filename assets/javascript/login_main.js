@@ -5,7 +5,7 @@ function checkLogin(){
         document.getElementById('login-noti').innerHTML='Login Successfully!!!!';
         setTimeout(function() {
             window.location.href = '/doan_blackpink/index.html';
-        }, 1000);     
+        }, 3000);     
     }else{
         alert('Login Failed! Please try again');
     }
