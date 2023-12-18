@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 body{
-    background-color: rgb(63, 3, 3);
+    background: linear-gradient(80deg,black , #c2395b) ;
 }
 
 html{
@@ -148,7 +148,7 @@ html{
     justify-content: space-between; /* Các phần tử con sẽ được căn giữa theo chiều ngang */
     align-items: center; /* Các phần tử con sẽ được căn giữa theo chiều dọc */
     border: 1px solid #ccc; /* Để dễ nhìn thấy box */
-    padding: 70px; /* Để tăng độ rộng của box */
+    padding: 20px; /* Để tăng độ rộng của box */
     background-color: rgb(45, 44, 44);
     margin-bottom: 60px;
         
