@@ -68,7 +68,26 @@ const app = {
         app.handleEvent.clickThumbnail()
     }
 }
-app.start()
+app.start();
+// yeu cau 2
+let currentIndex=0;
+let totalSlides=4;
+function showSlide(index) {
+    if (index < 0) {
+        currentIndex = totalSlides - 1;
+    } else if (index >= totalSlides) {
+        currentIndex = 0;
+    } else {
+        currentIndex = index;
+    }
+    app.currentItem=currentIndex;
+    app.render();
+}
+function nextSlide() {
+    showSlide(currentIndex +1);
+}
+setInterval(nextSlide,3000);
+
 //modal show/hide
 const modal=document.querySelector('.js-album-modal');
 const modalContainer=document.querySelector('.js-modal-container');

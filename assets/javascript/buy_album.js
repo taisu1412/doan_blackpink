@@ -55,7 +55,6 @@ function initApp(){
 initApp();
 function addToCart(key){
     if(listCarts[key] == null){
-        // copy product form list to list card
         listCarts[key] = JSON.parse(JSON.stringify(products[key]));
         listCarts[key].quantity = 1;
     }
